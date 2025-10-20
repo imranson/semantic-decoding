@@ -1,0 +1,944 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuade is available: True
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 5.94kB [00:00, 28.5MB/s]
+Downloading extra modules:   0%|          | 0.00/1.55k [00:00<?, ?B/s]Downloading extra modules: 4.07kB [00:00, 17.8MB/s]                   
+Downloading extra modules: 0.00B [00:00, ?B/s]Downloading extra modules: 3.34kB [00:00, 22.4MB/s]
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 7.02kB [00:00, 31.7MB/s]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 49 reference and 56 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 37, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/perceived_movie/sintal.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 52 reference and 49 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 45 reference and 53 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 62 reference and 53 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 66 reference and 62 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 41 reference and 60 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 53 reference and 58 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 53 reference and 56 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 52 reference and 57 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 52 reference and 53 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 64 reference and 57 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 64 reference and 60 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 44 reference and 56 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 44 reference and 60 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 50 reference and 53 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 50 reference and 54 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 51 reference and 49 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 37, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S2/perceived_movie/sintal.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 52 reference and 42 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 45 reference and 55 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 62 reference and 52 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 66 reference and 64 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 41 reference and 50 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 53 reference and 55 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 53 reference and 57 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 52 reference and 57 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 52 reference and 62 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 64 reference and 55 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 64 reference and 54 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 44 reference and 55 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 44 reference and 52 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 50 reference and 61 hypothesis sentences.
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 83, in score
+    else: error = wer(ref_seg, pred_seg)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/measures.py", line 82, in wer
+    output = process_words(
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/jiwer/process.py", line 169, in process_words
+    raise ValueError(
+ValueError: After applying the transforms on the reference and hypothesis sentences, their lengths must match. Instead got 50 reference and 56 hypothesis sentences.

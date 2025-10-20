@@ -8,7 +8,7 @@ from Decoder import Decoder, Hypothesis
 from LanguageModel import LanguageModel
 
 from jiwer import wer
-import evaluate
+import evaluate # from datasets import load_metric
 from bert_score import BERTScorer
 
 BAD_WORDS_PERCEIVED_SPEECH = frozenset(["sentence_start", "sentence_end", "br", "lg", "ls", "ns", "sp"])

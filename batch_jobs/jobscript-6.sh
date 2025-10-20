@@ -25,6 +25,6 @@ echo "Job is using $SLURM_GPUS GPU(s) with ID(s) $CUDA_VISIBLE_DEVICES and $SLUR
 python3 -c "import torch;
 print(f'torch cuade is available: {torch.cuda.is_available()}')"
 
-python3 decoding/run_decoder.py --subject S1 --experiment imagined_speech --task alpha_repeat-1
+python3 decoding/run_decoder.py --subject S3 --experiment perceived_movie --task sintel
 
 conda deactivate

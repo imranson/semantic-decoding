@@ -1,0 +1,4 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuade is available: True
+/net/scratch/q12628ct/semantic-decoding/decoding/utils_ridge/interpdata.py:159: RuntimeWarning: invalid value encountered in divide
+  val = window * np.sin(np.pi*t) * np.sin(np.pi*t/window) / (np.pi**2 * t**2)
