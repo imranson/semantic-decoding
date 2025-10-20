@@ -27,7 +27,7 @@ print(f'torch cuade is available: {torch.cuda.is_available()}')"
 
 python3 decoding/evaluate_predictions.py --subject S1 --experiment perceived_speech --task wheretheressmoke
 
-python3 decoding/evaluate_predictions.py --subject S1 --experiment perceived_movie --task sintal
+python3 decoding/evaluate_predictions.py --subject S1 --experiment perceived_movie --task sintel
 python3 decoding/evaluate_predictions.py --subject S1 --experiment perceived_movie --task presto
 python3 decoding/evaluate_predictions.py --subject S1 --experiment perceived_movie --task partlycloudy
 python3 decoding/evaluate_predictions.py --subject S1 --experiment perceived_movie --task laluna
@@ -48,7 +48,7 @@ python3 decoding/evaluate_predictions.py --subject S1 --experiment imagined_spee
 
 python3 decoding/evaluate_predictions.py --subject S2 --experiment perceived_speech --task wheretheressmoke
 
-python3 decoding/evaluate_predictions.py --subject S2 --experiment perceived_movie --task sintal
+python3 decoding/evaluate_predictions.py --subject S2 --experiment perceived_movie --task sintel
 python3 decoding/evaluate_predictions.py --subject S2 --experiment perceived_movie --task presto
 python3 decoding/evaluate_predictions.py --subject S2 --experiment perceived_movie --task partlycloudy
 python3 decoding/evaluate_predictions.py --subject S2 --experiment perceived_movie --task laluna
