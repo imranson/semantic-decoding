@@ -9,10 +9,10 @@ CLAUDE.md
 /Articles/
 /Downloads/
 /data_lm/
-/data_test/
-/data_train/*
+/data_test/test_stimulus
+/data_test/test_response
+/data_train/train_stimulus
+/data_train/train_response
 /models/*
 !/models/README.md
-!/data_train/ROIs/
-/data_train/ROIs/*
-!/data_train/ROIs/README.md
+
