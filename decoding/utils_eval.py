@@ -96,7 +96,7 @@ class BLEU(object):
     def score(self, ref, pred):
         results = []
         for r, p in zip(ref, pred):
-            self.metric.add_batch(predictions=[p], references=[[r]])
+            self.metric.add_batch(predictions=[' '.join(p)], references=[[' '.join(r)]])
             results.append(self.metric.compute(max_order = self.n)["bleu"])
         return np.array(results)
     
