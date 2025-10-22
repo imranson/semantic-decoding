@@ -15,9 +15,9 @@
 #SBATCH --mail-user=chun.tham@student.manchester.ac.uk
 
 module purge
+module load libs/cuda
 
 conda deactivate
-
 conda activate semantic-decoding
 
 echo "Job is using $SLURM_GPUS GPU(s) with ID(s) $CUDA_VISIBLE_DEVICES and $SLURM_NTASKS CPU core(s)"

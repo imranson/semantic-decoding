@@ -15,6 +15,7 @@
 #SBATCH --mail-user=chun.tham@student.manchester.ac.uk
 
 module purge
+module load libs/cuda
 
 conda deactivate
 
