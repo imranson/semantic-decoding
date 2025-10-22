@@ -1,0 +1,1166 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuade is available: True
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'got', 'there', ..., 'in', 'the', 'road'],
+Input references: [['i', 'had', 'no', 'shoes', 'on', 'i', 'was', 'crying', 'i', 'had', 'no', 'wallet', 'but', 'i', 'was', 'ok', 'because', 'i', 'had', 'my', 'cigarettes', 'and', 'i', "didn't", 'want', 'any', 'part', 'of', 'freedom', 'if', 'i', "didn't", 'have', 'my', 'cigarettes', 'when', 'you', 'live', 'with', 'someone', 'who', 'has', 'a', 'temper', 'a', 'very', 'bad', 'temper', 'a']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 50, in <module>
+    ref_data = load_transcript(args.experiment, reference)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 23, in load_transcript
+    with open(grid_path) as f: 
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/test_stimulus/perceived_movie/sintel.TextGrid'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['he', 'would', 'come', ..., 'time', 'to', 'go'],
+Input references: [['rabbit', 'reaches', 'for', 'it', 'he', 'looks', 'at', 'his', 'stomach', 'he', 'reaches', 'again', 'for', 'the', 'carrot', 'which', 'lies', 'just', 'beyond', 'his', 'grasp', 'the', 'rabbit', 'furiously', 'jumps', 'up', 'and', 'down', 'the', 'magician', 'enters', 'the', 'room', 'chewing', 'and', 'wiping', 'his', 'mouth', 'he', 'eyes', 'a', 'pocket', 'watch', 'he', 'locks', 'the', 'door', 'and', 'steps', 'past', 'the', 'rabbit']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'can', 'tell', ..., 'after', 'about', 'months'],
+Input references: [['baby', 'another', 'stork', 'delivers', 'a', 'bundle', 'on', 'a', 'doorstep', "it's", 'two', 'kittens', 'nearby', 'a', 'third', 'stork', 'leaves', 'two', 'puppies', 'by', 'a', 'doghouse', 'it', 'takes', 'flight', 'again', 'joining', 'the', 'rest', 'of', 'the', 'flock', 'the', 'birds', 'flap', 'their', 'wide', 'graceful', 'wings', 'as', 'they', 'disappear', 'into', 'the', 'clouds']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'had', 'to', ..., 'to', 'my', 'son'],
+Input references: [['a', 'thick', 'brown', 'mustache', 'works', 'the', 'oars', 'a', 'little', 'boy', 'peeks', 'over', 'the', 'side', 'of', 'the', 'small', 'wooden', 'craft', 'an', 'old', 'man', 'with', 'a', 'long', 'white', 'beard', 'sits', 'near', 'the', 'stern', 'a', 'hanging', 'lantern', 'behind', 'him', 'a', "bird's", 'eye', 'view', 'shows', 'the', 'boat', 'moving', 'steadily', 'across', 'the', "ocean's", 'dark', 'surface', 'with', 'no', 'land', 'in', 'sight', 'the', 'burly', 'man', 'sets', 'his', 'oars', 'inside']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'will', 'find', ..., 'have', 'saved', 'it'],
+Input references: [['i', 'tell', 'him', "it's", 'a', 'concert', 't', 'shirt', "it's", 'a', 'christmas', 'present', 'for', 'benji', 'our', 'friend', 'and', 'my', 'best', 'friend', 'pat', 'looks', 'at', 'me', 'a', 'little', 'funny', 'and', "pat's", 'only', 'fourteen', 'at', 'the', 'time', 'but', "he's", 'already', 'cooler', 'than', 'i', 'will', 'ever', 'be', 'in', 'my', 'entire', 'life', 'so', 'when', 'he', 's', 'looks', 'at', 'me', 'like', 'that', 'i', 'always', 'pay', 'attention', 'pat', 'tells', 'me', 'that', 'guys', "don't"]]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['she', 'would', 'have', ..., 'she', 'should', 'have'],
+Input references: [['conservative', 'and', 'christian', 'household', 'like', 'some', 'real', 'footloose', 'shit', 'right', 'so', 'there', 'was', 'no', 'dancing', 'no', 'makeup', 'no', 'jewelry', 'vegetarianism', 'modest', 'dress', 'we', "couldn't", 'watch', 'tv', 'on', 'the', 'sabbath', 'so', "it's", 'nineteen', 'eighty', 'five', 'and', 'i', 'was', 'six', 'years', 'old', 'and']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'will', 'come', ..., 'i', 'mean', 'the'],
+Input references: [['every', 'morning', 'i', 'woke', 'up', 'with', 'two', 'giant', 'animals', 'nuzzling', 'me', 'panting', 'in', 'my', 'face', 'demanding', 'to', 'be', 'walked', 'i', 'would', 'walk', 'them', 'and', 'upon', 'my', 'return', "i'd", 'check', 'the', 'phone', 'hoping', 'i', 'had', 'somehow', 'missed', 'my', "wife's", 'call', 'saying', 'that', 'she', 'had', 'changed', 'her', 'mind', 'and', 'was', 'moving', 'back', 'she', 'never', 'did']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'are', 'a', ..., 'gate', 'to', 'the'],
+Input references: [['every', 'morning', 'i', 'woke', 'up', 'with', 'two', 'giant', 'animals', 'nuzzling', 'me', 'panting', 'in', 'my', 'face', 'demanding', 'to', 'be', 'walked', 'i', 'would', 'walk', 'them', 'and', 'upon', 'my', 'return', "i'd", 'check', 'the', 'phone', 'hoping', 'i', 'had', 'somehow', 'missed', 'my', "wife's", 'call', 'saying', 'that', 'she', 'had', 'changed', 'her', 'mind', 'and', 'was', 'moving', 'back', 'she', 'never', 'did']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'are', 'all', ..., 'i', 'can', 'never'],
+Input references: [['when', 'my', 'son', 'jeff', 'was', 'little', 'he', 'was', 'a', 'pain', 'in', 'the', 'neck', 'about', 'eating', 'on', 'one', 'drive', 'to', 'huntsville', 'alabama', 'he', 'sobbed', 'for', 'seventy', 'minutes', 'i', 'know', 'because', 'i', 'timed', 'it', 'about', 'how', 'we', 'were', 'starving', 'him', 'to', 'death', 'we', 'stopped', 'at', 'a', 'diner', 'and', 'ordered', 'him', 'a', 'meal', 'and', 'he']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['he', 'said', 'no', ..., 'the', 'next', 'morning'],
+Input references: [['when', 'my', 'son', 'jeff', 'was', 'little', 'he', 'was', 'a', 'pain', 'in', 'the', 'neck', 'about', 'eating', 'on', 'one', 'drive', 'to', 'huntsville', 'alabama', 'he', 'sobbed', 'for', 'seventy', 'minutes', 'i', 'know', 'because', 'i', 'timed', 'it', 'about', 'how', 'we', 'were', 'starving', 'him', 'to', 'death', 'we', 'stopped', 'at', 'a', 'diner', 'and', 'ordered', 'him', 'a', 'meal', 'and', 'he']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', "don't", 'get', ..., 'comfortable', 'and', 'knows'],
+Input references: [['for', 'my', 'third', 'date', 'with', 'tracy', "i'm", 'taking', 'her', 'to', 'the', 'sum', 'hey', 'rice', 'shoppe', 'in', 'manhattan', "you're", 'going', 'to', 'love', 'this', 'place', 'i', 'tell', 'her', 'when', 'i', 'was', 'a', 'kid', 'i', 'used', 'to', 'order', 'pork', 'chow', 'mai', 'fun', 'and', 'smear', 'it', 'on', 'the', 'plate', 'with', 'ketchup', 'tracy', 'beams', 'at', 'me', 'from', 'the', 'passenger', 'seat', 'she', 'clearly', 'likes', 'that', "i'm", 'already', 'sharing', 'family', 'stuff']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'need', 'to', ..., 'said', 'hey', 'man'],
+Input references: [['for', 'my', 'third', 'date', 'with', 'tracy', "i'm", 'taking', 'her', 'to', 'the', 'sum', 'hey', 'rice', 'shoppe', 'in', 'manhattan', "you're", 'going', 'to', 'love', 'this', 'place', 'i', 'tell', 'her', 'when', 'i', 'was', 'a', 'kid', 'i', 'used', 'to', 'order', 'pork', 'chow', 'mai', 'fun', 'and', 'smear', 'it', 'on', 'the', 'plate', 'with', 'ketchup', 'tracy', 'beams', 'at', 'me', 'from', 'the', 'passenger', 'seat', 'she', 'clearly', 'likes', 'that', "i'm", 'already', 'sharing', 'family', 'stuff']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['she', 'is', 'so', ..., 'was', 'not', 'in'],
+Input references: [['that', 'spring', 'was', 'promising', 'to', 'be', 'the', 'greatest', 'time', 'of', 'my', 'life', 'i', 'was', 'happily', 'in', 'love', 'for', 'the', 'first', 'time', 'i', 'saw', 'marko', 'at', 'school', 'and', 'was', 'attracted', 'to', 'his', 'eyes', 'and', 'playful', 'smile', 'one', 'afternoon', 'while', 'walking', 'home', 'from', 'a', 'piano', 'lesson']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'know', 'what', ..., 'my', 'kid', 'for'],
+Input references: [['that', 'spring', 'was', 'promising', 'to', 'be', 'the', 'greatest', 'time', 'of', 'my', 'life', 'i', 'was', 'happily', 'in', 'love', 'for', 'the', 'first', 'time', 'i', 'saw', 'marko', 'at', 'school', 'and', 'was', 'attracted', 'to', 'his', 'eyes', 'and', 'playful', 'smile', 'one', 'afternoon', 'while', 'walking', 'home', 'from', 'a', 'piano', 'lesson']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'think', 'we', ..., 'and', 'the', 'parents'],
+Input references: [['to', 'reach', 'chimi', 'you', 'take', 'a', 'dirt', 'road', 'then', 'walk', 'through', 'wheat', 'fields', 'across', 'a', 'stream', 'and', 'past', 'timber', 'houses', 'until', 'you', 'climb', 'a', 'small', 'rise', 'and', 'find', 'an', 'unprepossessing', 'building', 'surrounded', 'by', 'the', 'usual', 'troika', 'of', 'himalayan', 'temple', 'attendants', 'dogs', 'scratching', 'at', 'fleas', 'chickens', 'scratching', 'at', 'dirt', 'and', 'monks']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['he', 'has', 'to', ..., 'stops', 'just', 'out'],
+Input references: [['to', 'reach', 'chimi', 'you', 'take', 'a', 'dirt', 'road', 'then', 'walk', 'through', 'wheat', 'fields', 'across', 'a', 'stream', 'and', 'past', 'timber', 'houses', 'until', 'you', 'climb', 'a', 'small', 'rise', 'and', 'find', 'an', 'unprepossessing', 'building', 'surrounded', 'by', 'the', 'usual', 'troika', 'of', 'himalayan', 'temple', 'attendants', 'dogs', 'scratching', 'at', 'fleas', 'chickens', 'scratching', 'at', 'dirt', 'and', 'monks']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['i', 'was', 'a', ..., 'as', 'the', 'laptop'],
+Input references: [['i', 'had', 'no', 'shoes', 'on', 'i', 'was', 'crying', 'i', 'had', 'no', 'wallet', 'but', 'i', 'was', 'ok', 'because', 'i', 'had', 'my', 'cigarettes', 'and', 'i', "didn't", 'want', 'any', 'part', 'of', 'freedom', 'if', 'i', "didn't", 'have', 'my', 'cigarettes', 'when', 'you', 'live', 'with', 'someone', 'who', 'has', 'a', 'temper', 'a', 'very', 'bad', 'temper', 'a']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 50, in <module>
+    ref_data = load_transcript(args.experiment, reference)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 23, in load_transcript
+    with open(grid_path) as f: 
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/test_stimulus/perceived_movie/sintel.TextGrid'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['she', 'had', 'just', ..., 'a', 'child', 'in'],
+Input references: [['rabbit', 'reaches', 'for', 'it', 'he', 'looks', 'at', 'his', 'stomach', 'he', 'reaches', 'again', 'for', 'the', 'carrot', 'which', 'lies', 'just', 'beyond', 'his', 'grasp', 'the', 'rabbit', 'furiously', 'jumps', 'up', 'and', 'down', 'the', 'magician', 'enters', 'the', 'room', 'chewing', 'and', 'wiping', 'his', 'mouth', 'he', 'eyes', 'a', 'pocket', 'watch', 'he', 'locks', 'the', 'door', 'and', 'steps', 'past', 'the', 'rabbit']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['he', 'said', 'you', ..., 'and', 'said', 'how'],
+Input references: [['baby', 'another', 'stork', 'delivers', 'a', 'bundle', 'on', 'a', 'doorstep', "it's", 'two', 'kittens', 'nearby', 'a', 'third', 'stork', 'leaves', 'two', 'puppies', 'by', 'a', 'doghouse', 'it', 'takes', 'flight', 'again', 'joining', 'the', 'rest', 'of', 'the', 'flock', 'the', 'birds', 'flap', 'their', 'wide', 'graceful', 'wings', 'as', 'they', 'disappear', 'into', 'the', 'clouds']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'would', 'be', ..., 'and', 'we', 'did'],
+Input references: [['a', 'thick', 'brown', 'mustache', 'works', 'the', 'oars', 'a', 'little', 'boy', 'peeks', 'over', 'the', 'side', 'of', 'the', 'small', 'wooden', 'craft', 'an', 'old', 'man', 'with', 'a', 'long', 'white', 'beard', 'sits', 'near', 'the', 'stern', 'a', 'hanging', 'lantern', 'behind', 'him', 'a', "bird's", 'eye', 'view', 'shows', 'the', 'boat', 'moving', 'steadily', 'across', 'the', "ocean's", 'dark', 'surface', 'with', 'no', 'land', 'in', 'sight', 'the', 'burly', 'man', 'sets', 'his', 'oars', 'inside']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'need', 'to', ..., 'pretty', 'much', 'screwed'],
+Input references: [['i', 'tell', 'him', "it's", 'a', 'concert', 't', 'shirt', "it's", 'a', 'christmas', 'present', 'for', 'benji', 'our', 'friend', 'and', 'my', 'best', 'friend', 'pat', 'looks', 'at', 'me', 'a', 'little', 'funny', 'and', "pat's", 'only', 'fourteen', 'at', 'the', 'time', 'but', "he's", 'already', 'cooler', 'than', 'i', 'will', 'ever', 'be', 'in', 'my', 'entire', 'life', 'so', 'when', 'he', 's', 'looks', 'at', 'me', 'like', 'that', 'i', 'always', 'pay', 'attention', 'pat', 'tells', 'me', 'that', 'guys', "don't"]]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['i', 'know', 'i', ..., 'with', 'her', 'husband'],
+Input references: [['conservative', 'and', 'christian', 'household', 'like', 'some', 'real', 'footloose', 'shit', 'right', 'so', 'there', 'was', 'no', 'dancing', 'no', 'makeup', 'no', 'jewelry', 'vegetarianism', 'modest', 'dress', 'we', "couldn't", 'watch', 'tv', 'on', 'the', 'sabbath', 'so', "it's", 'nineteen', 'eighty', 'five', 'and', 'i', 'was', 'six', 'years', 'old', 'and']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['he', 'has', 'to', ..., 'nice', 'guy', 'and'],
+Input references: [['every', 'morning', 'i', 'woke', 'up', 'with', 'two', 'giant', 'animals', 'nuzzling', 'me', 'panting', 'in', 'my', 'face', 'demanding', 'to', 'be', 'walked', 'i', 'would', 'walk', 'them', 'and', 'upon', 'my', 'return', "i'd", 'check', 'the', 'phone', 'hoping', 'i', 'had', 'somehow', 'missed', 'my', "wife's", 'call', 'saying', 'that', 'she', 'had', 'changed', 'her', 'mind', 'and', 'was', 'moving', 'back', 'she', 'never', 'did']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['i', 'was', 'just', ..., 'her', 'situation', 'in'],
+Input references: [['every', 'morning', 'i', 'woke', 'up', 'with', 'two', 'giant', 'animals', 'nuzzling', 'me', 'panting', 'in', 'my', 'face', 'demanding', 'to', 'be', 'walked', 'i', 'would', 'walk', 'them', 'and', 'upon', 'my', 'return', "i'd", 'check', 'the', 'phone', 'hoping', 'i', 'had', 'somehow', 'missed', 'my', "wife's", 'call', 'saying', 'that', 'she', 'had', 'changed', 'her', 'mind', 'and', 'was', 'moving', 'back', 'she', 'never', 'did']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'have', 'to', ..., 'marriage', 'she', 'would'],
+Input references: [['when', 'my', 'son', 'jeff', 'was', 'little', 'he', 'was', 'a', 'pain', 'in', 'the', 'neck', 'about', 'eating', 'on', 'one', 'drive', 'to', 'huntsville', 'alabama', 'he', 'sobbed', 'for', 'seventy', 'minutes', 'i', 'know', 'because', 'i', 'timed', 'it', 'about', 'how', 'we', 'were', 'starving', 'him', 'to', 'death', 'we', 'stopped', 'at', 'a', 'diner', 'and', 'ordered', 'him', 'a', 'meal', 'and', 'he']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'think', 'the', ..., 'do', 'it', 'again'],
+Input references: [['when', 'my', 'son', 'jeff', 'was', 'little', 'he', 'was', 'a', 'pain', 'in', 'the', 'neck', 'about', 'eating', 'on', 'one', 'drive', 'to', 'huntsville', 'alabama', 'he', 'sobbed', 'for', 'seventy', 'minutes', 'i', 'know', 'because', 'i', 'timed', 'it', 'about', 'how', 'we', 'were', 'starving', 'him', 'to', 'death', 'we', 'stopped', 'at', 'a', 'diner', 'and', 'ordered', 'him', 'a', 'meal', 'and', 'he']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'can', 'try', ..., 'was', 'doing', 'too'],
+Input references: [['for', 'my', 'third', 'date', 'with', 'tracy', "i'm", 'taking', 'her', 'to', 'the', 'sum', 'hey', 'rice', 'shoppe', 'in', 'manhattan', "you're", 'going', 'to', 'love', 'this', 'place', 'i', 'tell', 'her', 'when', 'i', 'was', 'a', 'kid', 'i', 'used', 'to', 'order', 'pork', 'chow', 'mai', 'fun', 'and', 'smear', 'it', 'on', 'the', 'plate', 'with', 'ketchup', 'tracy', 'beams', 'at', 'me', 'from', 'the', 'passenger', 'seat', 'she', 'clearly', 'likes', 'that', "i'm", 'already', 'sharing', 'family', 'stuff']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'got', 'in', ..., 'of', 'being', 'like'],
+Input references: [['for', 'my', 'third', 'date', 'with', 'tracy', "i'm", 'taking', 'her', 'to', 'the', 'sum', 'hey', 'rice', 'shoppe', 'in', 'manhattan', "you're", 'going', 'to', 'love', 'this', 'place', 'i', 'tell', 'her', 'when', 'i', 'was', 'a', 'kid', 'i', 'used', 'to', 'order', 'pork', 'chow', 'mai', 'fun', 'and', 'smear', 'it', 'on', 'the', 'plate', 'with', 'ketchup', 'tracy', 'beams', 'at', 'me', 'from', 'the', 'passenger', 'seat', 'she', 'clearly', 'likes', 'that', "i'm", 'already', 'sharing', 'family', 'stuff']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'could', 'have', ..., 'important', 'thing', 'to'],
+Input references: [['that', 'spring', 'was', 'promising', 'to', 'be', 'the', 'greatest', 'time', 'of', 'my', 'life', 'i', 'was', 'happily', 'in', 'love', 'for', 'the', 'first', 'time', 'i', 'saw', 'marko', 'at', 'school', 'and', 'was', 'attracted', 'to', 'his', 'eyes', 'and', 'playful', 'smile', 'one', 'afternoon', 'while', 'walking', 'home', 'from', 'a', 'piano', 'lesson']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['they', 'are', 'very', ..., 'own', 'right', 'after'],
+Input references: [['that', 'spring', 'was', 'promising', 'to', 'be', 'the', 'greatest', 'time', 'of', 'my', 'life', 'i', 'was', 'happily', 'in', 'love', 'for', 'the', 'first', 'time', 'i', 'saw', 'marko', 'at', 'school', 'and', 'was', 'attracted', 'to', 'his', 'eyes', 'and', 'playful', 'smile', 'one', 'afternoon', 'while', 'walking', 'home', 'from', 'a', 'piano', 'lesson']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', 'were', 'driving', ..., 'parents', 'were', 'too'],
+Input references: [['to', 'reach', 'chimi', 'you', 'take', 'a', 'dirt', 'road', 'then', 'walk', 'through', 'wheat', 'fields', 'across', 'a', 'stream', 'and', 'past', 'timber', 'houses', 'until', 'you', 'climb', 'a', 'small', 'rise', 'and', 'find', 'an', 'unprepossessing', 'building', 'surrounded', 'by', 'the', 'usual', 'troika', 'of', 'himalayan', 'temple', 'attendants', 'dogs', 'scratching', 'at', 'fleas', 'chickens', 'scratching', 'at', 'dirt', 'and', 'monks']]
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <module>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 62, in <listcomp>
+    window_null_scores = np.array([metric.score(ref = ref_windows, pred = null_windows) 
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_eval.py", line 99, in score
+    self.metric.add_batch(predictions=[p], references=[[r]])
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 514, in add_batch
+    self.selected_feature_format = self._infer_feature_from_batch(batch)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 596, in _infer_feature_from_batch
+    return self._infer_feature_from_example(example)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/evaluate/module.py", line 616, in _infer_feature_from_example
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format:
+Feature option 0: {'predictions': Value('string'), 'references': List(Value('string'))}
+Feature option 1: {'predictions': Value('string'), 'references': Value('string')},
+Input predictions: ['we', "can't", 'really', ..., 'your', 'own', 'food'],
+Input references: [['to', 'reach', 'chimi', 'you', 'take', 'a', 'dirt', 'road', 'then', 'walk', 'through', 'wheat', 'fields', 'across', 'a', 'stream', 'and', 'past', 'timber', 'houses', 'until', 'you', 'climb', 'a', 'small', 'rise', 'and', 'find', 'an', 'unprepossessing', 'building', 'surrounded', 'by', 'the', 'usual', 'troika', 'of', 'himalayan', 'temple', 'attendants', 'dogs', 'scratching', 'at', 'fleas', 'chickens', 'scratching', 'at', 'dirt', 'and', 'monks']]
