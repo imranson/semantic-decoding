@@ -63,14 +63,18 @@ if __name__ == "__main__":
                                            for null_windows in null_window_list])
             story_null_scores = window_null_scores.mean(1)
 
+            print(reference)
+            print(mname)
+            print(story_null_scores)
+
             # get raw score and normalized score for each window
             window_scores[(reference, mname)] = metric.score(ref = ref_windows, pred = pred_windows)
             window_zscores[(reference, mname)] = (window_scores[(reference, mname)] 
                                                   - window_null_scores.mean(0)) / window_null_scores.std(0)
 
             # get raw score and normalized score for the entire story
-            story_scores[(reference, mname)] = metric.score(ref = ref_windows, pred = pred_windows)
-            story_zscores[(reference, mname)] = (story_scores[(reference, mname)].mean()
+            story_scores[(reference, mname)] = metric.score(ref = ref_windows, pred = pred_windows).mean()
+            story_zscores[(reference, mname)] = (story_scores[(reference, mname)]
                                                  - story_null_scores.mean()) / story_null_scores.std()
     
     save_location = os.path.join(config.REPO_DIR, "scores", args.subject, args.experiment)
