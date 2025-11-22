@@ -1,0 +1,19 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuade is available: True
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[2025-11-19T13:56:35.318] error: *** JOB 8968248 ON node861 CANCELLED AT 2025-11-19T13:56:35 DUE to SIGNAL Terminated ***
