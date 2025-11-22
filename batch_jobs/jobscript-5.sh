@@ -26,25 +26,25 @@ echo "Job is using $SLURM_GPUS GPU(s) with ID(s) $CUDA_VISIBLE_DEVICES and $SLUR
 python3 -c "import torch;
 print(f'torch cuade is available: {torch.cuda.is_available()}')"
 
-python3 decoding/evaluate_predictions.py --subject S3 --experiment perceived_speech --task wheretheressmoke
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment perceived_speech --task wheretheressmoke
 
-python3 decoding/evaluate_predictions.py --subject S3 --experiment perceived_movie --task sintel
-python3 decoding/evaluate_predictions.py --subject S3 --experiment perceived_movie --task presto
-python3 decoding/evaluate_predictions.py --subject S3 --experiment perceived_movie --task partlycloudy
-python3 decoding/evaluate_predictions.py --subject S3 --experiment perceived_movie --task laluna
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment perceived_movie --task sintel
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment perceived_movie --task presto
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment perceived_movie --task partlycloudy
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment perceived_movie --task laluna
 
-python3 decoding/evaluate_predictions.py --subject S3 --experiment perceived_multispeaker --task attend-M
-python3 decoding/evaluate_predictions.py --subject S3 --experiment perceived_multispeaker --task attend-F
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment perceived_multispeaker --task attend-M
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment perceived_multispeaker --task attend-F
 
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task alpha_repeat-1
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task alpha_repeat-2
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task bravo_repeat-1
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task bravo_repeat-2
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task charlie_repeat-1
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task charlie_repeat-2
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task delta_repeat-1
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task delta_repeat-2
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task echo_repeat-1
-python3 decoding/evaluate_predictions.py --subject S3 --experiment imagined_speech --task echo_repeat-2
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task alpha_repeat-1
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task alpha_repeat-2
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task bravo_repeat-1
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task bravo_repeat-2
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task charlie_repeat-1
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task charlie_repeat-2
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task delta_repeat-1
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task delta_repeat-2
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task echo_repeat-1
+python3 decoding/evaluate_predictions.py --null 200 --subject S3 --experiment imagined_speech --task echo_repeat-2
 
 conda deactivate
