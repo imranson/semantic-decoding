@@ -2,8 +2,16 @@
 
 This repository contains code used in the paper "Semantic reconstruction of continuous language from non-invasive brain recordings" by Jerry Tang, Amanda LeBel, Shailee Jain, and Alexander G. Huth.  
 
-## CSF3 usage tips
-if ssh-agent not running, run
+## CSF3 usage tips IMPORTANT
+if below:
+```
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+then run
 ```
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
