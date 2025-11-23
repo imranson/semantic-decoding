@@ -9,7 +9,8 @@ CLAUDE.md
 /Articles/
 /Downloads/
 /data_lm/
-/data_test/
+/data_test/*
+!/data_test/README.md
 /data_train/*
 /models/*
 !/models/README.md
