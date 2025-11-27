@@ -1,0 +1,13 @@
+subject,task,BERT
+1,attend-M,8.438508
+1,attend-F,7.7268677
+2,attend-M,13.385308
+2,attend-F,11.172753
+3,attend-M,11.771649
+3,attend-F,10.359838
+1,attend-M-ref-F,0.65715855
+1,attend-F-ref-M,0.39658198
+2,attend-M-ref-F,0.72627974
+2,attend-F-ref-M,0.6647838
+3,attend-M-ref-F,1.321869
+3,attend-F-ref-M,0.09328398
