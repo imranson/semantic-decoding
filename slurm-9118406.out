@@ -1,0 +1,202 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuade is available: True
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 22, in <module>
+    with open(os.path.join(config.DATA_TEST_DIR, "eval_segments.json"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_test/eval_segments.json'
