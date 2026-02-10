@@ -26,16 +26,16 @@ echo "Job is using $SLURM_GPUS GPU(s) with ID(s) $CUDA_VISIBLE_DEVICES and $SLUR
 python3 -c "import torch;
 print(f'torch cuade is available: {torch.cuda.is_available()}')"
 
-python3 decoding/train_EM.py --subject S4 --gpt imagined
-python3 decoding/train_EM.py --subject S4 --gpt perceived
-python3 decoding/train_WR.py --subject S4
+python3 decoding/train_EM.py --subject S7 --gpt imagined
+python3 decoding/train_EM.py --subject S7 --gpt perceived
+python3 decoding/train_WR.py --subject S7
 
-python3 decoding/train_EM.py --subject S5 --gpt imagined
-python3 decoding/train_EM.py --subject S5 --gpt perceived
-python3 decoding/train_WR.py --subject S5
+python3 decoding/train_EM.py --subject S8 --gpt imagined
+python3 decoding/train_EM.py --subject S8 --gpt perceived
+python3 decoding/train_WR.py --subject S8
 
-python3 decoding/train_EM.py --subject S6 --gpt imagined
-python3 decoding/train_EM.py --subject S6 --gpt perceived
-python3 decoding/train_WR.py --subject S6
+python3 decoding/train_EM.py --subject S9 --gpt imagined
+python3 decoding/train_EM.py --subject S9 --gpt perceived
+python3 decoding/train_WR.py --subject S9
 
 conda deactivate
