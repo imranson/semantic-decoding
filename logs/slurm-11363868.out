@@ -1,0 +1,92 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuade is available: True
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_EM.py", line 37, in <module>
+    rresp = get_resp(args.subject, stories, stack = True)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_resp.py", line 14, in get_resp
+    hf = h5py.File(resp_path, "r")
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 566, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 241, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 104, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/net/scratch/q12628ct/semantic-decoding/data_train/train_response/S4/life.hf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_EM.py", line 37, in <module>
+    rresp = get_resp(args.subject, stories, stack = True)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_resp.py", line 14, in get_resp
+    hf = h5py.File(resp_path, "r")
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 566, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 241, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 104, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/net/scratch/q12628ct/semantic-decoding/data_train/train_response/S4/life.hf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_WR.py", line 29, in <module>
+    with open(os.path.join(config.DATA_TRAIN_DIR, "ROIs", "%s.json" % args.subject), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_train/ROIs/S4.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_EM.py", line 37, in <module>
+    rresp = get_resp(args.subject, stories, stack = True)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_resp.py", line 14, in get_resp
+    hf = h5py.File(resp_path, "r")
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 566, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 241, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 104, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/net/scratch/q12628ct/semantic-decoding/data_train/train_response/S5/breakingupintheageofgoogle.hf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_EM.py", line 37, in <module>
+    rresp = get_resp(args.subject, stories, stack = True)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_resp.py", line 14, in get_resp
+    hf = h5py.File(resp_path, "r")
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 566, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 241, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 104, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/net/scratch/q12628ct/semantic-decoding/data_train/train_response/S5/breakingupintheageofgoogle.hf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_WR.py", line 29, in <module>
+    with open(os.path.join(config.DATA_TRAIN_DIR, "ROIs", "%s.json" % args.subject), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_train/ROIs/S5.json'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_EM.py", line 37, in <module>
+    rresp = get_resp(args.subject, stories, stack = True)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_resp.py", line 14, in get_resp
+    hf = h5py.File(resp_path, "r")
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 566, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 241, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 104, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/net/scratch/q12628ct/semantic-decoding/data_train/train_response/S6/breakingupintheageofgoogle.hf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_EM.py", line 37, in <module>
+    rresp = get_resp(args.subject, stories, stack = True)
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/utils_resp.py", line 14, in get_resp
+    hf = h5py.File(resp_path, "r")
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 566, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/h5py/_hl/files.py", line 241, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 104, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/net/scratch/q12628ct/semantic-decoding/data_train/train_response/S6/breakingupintheageofgoogle.hf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/train_WR.py", line 29, in <module>
+    with open(os.path.join(config.DATA_TRAIN_DIR, "ROIs", "%s.json" % args.subject), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/data_train/ROIs/S6.json'
