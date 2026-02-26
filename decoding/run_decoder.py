@@ -16,6 +16,7 @@ from utils_stim import predict_word_rate, predict_word_times
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--subject", type = str, required = True)
+    parser.add_argument("--word-rate-voxels", type=str, default=None, help="Specify word rate voxel type (speech/auditory). If None, auto-detected from experiment.") 
     parser.add_argument("--experiment", type = str, required = True)
     parser.add_argument("--task", type = str, required = True)
     parser.add_argument("--width", type = int, default=config.WIDTH)
@@ -27,8 +28,13 @@ if __name__ == "__main__":
     else: gpt_checkpoint = "perceived"
 
     # determine word rate model voxels based on experiment
-    if args.experiment in ["imagined_speech", "perceived_movies"]: word_rate_voxels = "speech"
-    else: word_rate_voxels = "auditory"
+    if args.word_rate_voxels:
+        word_rate_voxels = args.word_rate_voxels
+    else:
+        if args.experiment in ["imagined_speech", "perceived_movie"]:
+            word_rate_voxels = "speech"
+        else:
+            word_rate_voxels = "auditory"
 
     # load responses
     hf = h5py.File(os.path.join(config.DATA_TEST_DIR, "test_response", args.subject, args.experiment, args.task + ".hf5"), "r")
