@@ -18,6 +18,8 @@ if __name__ == "__main__":
     parser.add_argument("--subject", type = str, required = True)
     parser.add_argument("--experiment", type = str, required = True)
     parser.add_argument("--task", type = str, required = True)
+    parser.add_argument("--width", type = int, default=config.WIDTH)
+    parser.add_argument("--tag", type = str, default="")
     args = parser.parse_args()
     
     # determine GPT checkpoint based on experiment
@@ -61,7 +63,7 @@ if __name__ == "__main__":
     lanczos_mat = get_lanczos_mat(word_times, tr_times)
 
     # decode responses
-    decoder = Decoder(word_times, config.WIDTH)
+    decoder = Decoder(word_times, args.width)
     sm = StimulusModel(lanczos_mat, tr_stats, word_stats[0], device = config.SM_DEVICE)
     for sample_index in range(len(word_times)):
         trs = affected_trs(decoder.first_difference(), sample_index, lanczos_mat)
@@ -79,6 +81,6 @@ if __name__ == "__main__":
         decoder.extend(verbose = False)
         
     if args.experiment in ["perceived_movie", "perceived_multispeaker"]: decoder.word_times += 10
-    save_location = os.path.join(config.RESULT_DIR, args.subject, args.experiment)
+    save_location = os.path.join(config.RESULT_DIR, args.subject, args.experiment, args.tag)
     os.makedirs(save_location, exist_ok = True)
     decoder.save(os.path.join(save_location, args.task))
