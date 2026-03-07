@@ -15,8 +15,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--subject", type = str, required = True)
     parser.add_argument("--gpt", type = str, default = "perceived")
-    parser.add_argument("--sessions", nargs = "+", type = int, 
+    parser.add_argument("--sessions", nargs = "+", type = int,
         default = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 18, 20])
+    parser.add_argument("--tag", type = str, default="")
+    parser.add_argument("--gpt-layer", type = int, default = config.GPT_LAYER)
+    parser.add_argument("--gpt-words", type = int, default = config.GPT_WORDS)
     args = parser.parse_args()
 
     # training stories
@@ -30,7 +33,7 @@ if __name__ == "__main__":
     with open(os.path.join(config.DATA_LM_DIR, args.gpt, "vocab.json"), "r") as f:
         gpt_vocab = json.load(f)
     gpt = GPT(path = os.path.join(config.DATA_LM_DIR, args.gpt, "model"), vocab = gpt_vocab, device = config.GPT_DEVICE)
-    features = LMFeatures(model = gpt, layer = config.GPT_LAYER, context_words = config.GPT_WORDS)
+    features = LMFeatures(model = gpt, layer = args.gpt_layer, context_words = args.gpt_words)
     
     # estimate encoding model
     rstim, tr_stats, word_stats = get_stim(stories, features)
@@ -56,8 +59,8 @@ if __name__ == "__main__":
     del stim_dict, resp_dict
     
     # save
-    save_location = os.path.join(config.MODEL_DIR, args.subject)
+    save_location = os.path.join(config.MODEL_DIR, args.subject, args.tag)
     os.makedirs(save_location, exist_ok = True)
-    np.savez(os.path.join(save_location, "encoding_model_%s" % args.gpt), 
+    np.savez(os.path.join(save_location, "encoding_model_%s" % args.gpt),
         weights = weights, noise_model = noise_model, alphas = alphas, voxels = vox, stories = stories,
         tr_stats = np.array(tr_stats), word_stats = np.array(word_stats))

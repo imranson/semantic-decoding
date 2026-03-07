@@ -21,6 +21,8 @@ if __name__ == "__main__":
     parser.add_argument("--task", type = str, required = True)
     parser.add_argument("--width", type = int, default=config.WIDTH)
     parser.add_argument("--tag", type = str, default="")
+    parser.add_argument("--gpt-layer", type = int, default = config.GPT_LAYER)
+    parser.add_argument("--gpt-words", type = int, default = config.GPT_WORDS)
     args = parser.parse_args()
     
     # determine GPT checkpoint based on experiment
@@ -47,7 +49,7 @@ if __name__ == "__main__":
     with open(os.path.join(config.DATA_LM_DIR, "decoder_vocab.json"), "r") as f:
         decoder_vocab = json.load(f)
     gpt = GPT(path = os.path.join(config.DATA_LM_DIR, gpt_checkpoint, "model"), vocab = gpt_vocab, device = config.GPT_DEVICE)
-    features = LMFeatures(model = gpt, layer = config.GPT_LAYER, context_words = config.GPT_WORDS)
+    features = LMFeatures(model = gpt, layer = args.gpt_layer, context_words = args.gpt_words)
     lm = LanguageModel(gpt, decoder_vocab, nuc_mass = config.LM_MASS, nuc_ratio = config.LM_RATIO)
 
     # load models
