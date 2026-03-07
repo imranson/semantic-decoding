@@ -17,7 +17,6 @@ if __name__ == "__main__":
     parser.add_argument("--gpt", type = str, default = "perceived")
     parser.add_argument("--sessions", nargs = "+", type = int,
         default = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 18, 20])
-    parser.add_argument("--tag", type = str, default="")
     parser.add_argument("--gpt-layer", type = int, default = config.GPT_LAYER)
     parser.add_argument("--gpt-words", type = int, default = config.GPT_WORDS)
     args = parser.parse_args()
@@ -59,8 +58,11 @@ if __name__ == "__main__":
     del stim_dict, resp_dict
     
     # save
-    save_location = os.path.join(config.MODEL_DIR, args.subject, args.tag)
+    save_location = os.path.join(config.MODEL_DIR, args.subject)
     os.makedirs(save_location, exist_ok = True)
-    np.savez(os.path.join(save_location, "encoding_model_%s" % args.gpt),
+    em_suffix = args.gpt
+    if args.gpt_layer != config.GPT_LAYER or args.gpt_words != config.GPT_WORDS:
+        em_suffix += "_layer%d_words%d" % (args.gpt_layer, args.gpt_words)
+    np.savez(os.path.join(save_location, "encoding_model_%s" % em_suffix),
         weights = weights, noise_model = noise_model, alphas = alphas, voxels = vox, stories = stories,
         tr_stats = np.array(tr_stats), word_stats = np.array(word_stats))

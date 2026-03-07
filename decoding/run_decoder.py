@@ -55,7 +55,10 @@ if __name__ == "__main__":
     # load models
     load_location = os.path.join(config.MODEL_DIR, args.subject)
     word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
-    encoding_model = np.load(os.path.join(load_location, "encoding_model_%s.npz" % gpt_checkpoint))
+    em_suffix = gpt_checkpoint
+    if args.gpt_layer != config.GPT_LAYER or args.gpt_words != config.GPT_WORDS:
+        em_suffix += "_layer%d_words%d" % (args.gpt_layer, args.gpt_words)
+    encoding_model = np.load(os.path.join(load_location, "encoding_model_%s.npz" % em_suffix))
     weights = encoding_model["weights"]
     noise_model = encoding_model["noise_model"]
     tr_stats = encoding_model["tr_stats"]
