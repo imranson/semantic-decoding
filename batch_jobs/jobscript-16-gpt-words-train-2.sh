@@ -25,10 +25,6 @@ echo "Job is using $SLURM_GPUS GPU(s) with ID(s) $CUDA_VISIBLE_DEVICES and $SLUR
 python3 -c "import torch;
 print(f'torch cuda is available: {torch.cuda.is_available()}')"
 
-python3 decoding/train_EM.py --subject S1 --gpt perceived --gpt-words 3
-python3 decoding/train_EM.py --subject S1 --gpt imagined --gpt-words 3
-python3 decoding/train_EM.py --subject S1 --gpt perceived --gpt-words 4
-python3 decoding/train_EM.py --subject S1 --gpt imagined --gpt-words 4
 # python3 decoding/train_EM.py --subject S1 --gpt perceived --gpt-words 5 #already have model
 # python3 decoding/train_EM.py --subject S1 --gpt imagined --gpt-words 5 #already have model
 python3 decoding/train_EM.py --subject S1 --gpt perceived --gpt-words 8
