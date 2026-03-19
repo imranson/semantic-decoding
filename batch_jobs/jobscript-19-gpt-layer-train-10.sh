@@ -1,7 +1,7 @@
 #!/bin/bash --login
 ### Choose ONE of the following partitions depending on your permitted access
 
-#SBATCH -p gpuL            
+#SBATCH -p gpuL         
 ### Required flags
 #SBATCH -G 1                 # (or --gpus=N) Number of GPUs 
 #SBATCH -t 4-0               # Wallclock timelimit (1-0 is one day, 4-0 is max permitted)
@@ -25,8 +25,10 @@ echo "Job is using $SLURM_GPUS GPU(s) with ID(s) $CUDA_VISIBLE_DEVICES and $SLUR
 python3 -c "import torch;
 print(f'torch cuda is available: {torch.cuda.is_available()}')"
 
-python3 decoding/train_EM.py --subject S1 --gpt perceived --gpt-layer 8
-python3 decoding/train_EM.py --subject S1 --gpt imagined --gpt-layer 8
+python3 decoding/train_EM.py --subject S2 --gpt perceived --gpt-layer 10
+python3 decoding/train_EM.py --subject S2 --gpt imagined --gpt-layer 10
+python3 decoding/train_EM.py --subject S3 --gpt perceived --gpt-layer 10
+python3 decoding/train_EM.py --subject S3 --gpt imagined --gpt-layer 10
 
 module purge
 conda deactivate
