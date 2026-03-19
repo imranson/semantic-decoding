@@ -71,8 +71,15 @@ class StimulusModel():
 class LMFeatures():
     """class for extracting contextualized features of stimulus words
     """
-    def __init__(self, model, layer, context_words):
+    def __init__(self, model, layer, context_words, layers = None):
         self.model, self.layer, self.context_words = model, layer, context_words
+        self.layers = layers
+
+    def _get_hidden(self, ids):
+        if self.layers is not None and len(self.layers) > 1:
+            return self.model.get_hidden_multilayer(ids, self.layers)
+        layer = self.layers[0] if self.layers is not None else self.layer
+        return self.model.get_hidden(ids, layer = layer)
 
     def extend(self, extensions, verbose = False):
         """outputs array of vectors corresponding to the last words of each extension
@@ -80,13 +87,13 @@ class LMFeatures():
         contexts = [extension[-(self.context_words+1):] for extension in extensions]
         if verbose: print(contexts)
         context_array = self.model.get_context_array(contexts)
-        embs = self.model.get_hidden(context_array, layer = self.layer)
+        embs = self._get_hidden(context_array)
         return embs[:, len(contexts[0]) - 1]
 
     def make_stim(self, words):
         """outputs matrix of features corresponding to the stimulus words
         """
         context_array = self.model.get_story_array(words, self.context_words)
-        embs = self.model.get_hidden(context_array, layer = self.layer)
-        return np.vstack([embs[0, :self.context_words], 
+        embs = self._get_hidden(context_array)
+        return np.vstack([embs[0, :self.context_words],
             embs[:context_array.shape[0] - self.context_words, self.context_words]])

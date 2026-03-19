@@ -18,8 +18,11 @@ if __name__ == "__main__":
     parser.add_argument("--sessions", nargs = "+", type = int,
         default = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 18, 20])
     parser.add_argument("--gpt-layer", type = int, default = config.GPT_LAYER)
+    parser.add_argument("--gpt-layers", nargs = "+", type = int, default = None)
     parser.add_argument("--gpt-words", type = int, default = config.GPT_WORDS)
     args = parser.parse_args()
+    if args.gpt_layers is None:
+        args.gpt_layers = [args.gpt_layer]
 
     # training stories
     stories = []
@@ -32,7 +35,7 @@ if __name__ == "__main__":
     with open(os.path.join(config.DATA_LM_DIR, args.gpt, "vocab.json"), "r") as f:
         gpt_vocab = json.load(f)
     gpt = GPT(path = os.path.join(config.DATA_LM_DIR, args.gpt, "model"), vocab = gpt_vocab, device = config.GPT_DEVICE)
-    features = LMFeatures(model = gpt, layer = args.gpt_layer, context_words = args.gpt_words)
+    features = LMFeatures(model = gpt, layer = args.gpt_layer, context_words = args.gpt_words, layers = args.gpt_layers)
     
     # estimate encoding model
     rstim, tr_stats, word_stats = get_stim(stories, features)
@@ -61,7 +64,9 @@ if __name__ == "__main__":
     save_location = os.path.join(config.MODEL_DIR, args.subject)
     os.makedirs(save_location, exist_ok = True)
     em_suffix = args.gpt
-    if args.gpt_layer != config.GPT_LAYER or args.gpt_words != config.GPT_WORDS:
+    if len(args.gpt_layers) > 1:
+        em_suffix += "_layers%s_words%d" % ("-".join(str(l) for l in args.gpt_layers), args.gpt_words)
+    elif args.gpt_layer != config.GPT_LAYER or args.gpt_words != config.GPT_WORDS:
         em_suffix += "_layer%d_words%d" % (args.gpt_layer, args.gpt_words)
     np.savez(os.path.join(save_location, "encoding_model_%s" % em_suffix),
         weights = weights, noise_model = noise_model, alphas = alphas, voxels = vox, stories = stories,

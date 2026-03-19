@@ -22,8 +22,11 @@ if __name__ == "__main__":
     parser.add_argument("--width", type = int, default=config.WIDTH)
     parser.add_argument("--tag", type = str, default="")
     parser.add_argument("--gpt-layer", type = int, default = config.GPT_LAYER)
+    parser.add_argument("--gpt-layers", nargs = "+", type = int, default = None)
     parser.add_argument("--gpt-words", type = int, default = config.GPT_WORDS)
     args = parser.parse_args()
+    if args.gpt_layers is None:
+        args.gpt_layers = [args.gpt_layer]
     
     # determine GPT checkpoint based on experiment
     if args.experiment in ["imagined_speech"]: gpt_checkpoint = "imagined"
@@ -49,14 +52,16 @@ if __name__ == "__main__":
     with open(os.path.join(config.DATA_LM_DIR, "decoder_vocab.json"), "r") as f:
         decoder_vocab = json.load(f)
     gpt = GPT(path = os.path.join(config.DATA_LM_DIR, gpt_checkpoint, "model"), vocab = gpt_vocab, device = config.GPT_DEVICE)
-    features = LMFeatures(model = gpt, layer = args.gpt_layer, context_words = args.gpt_words)
+    features = LMFeatures(model = gpt, layer = args.gpt_layer, context_words = args.gpt_words, layers = args.gpt_layers)
     lm = LanguageModel(gpt, decoder_vocab, nuc_mass = config.LM_MASS, nuc_ratio = config.LM_RATIO)
 
     # load models
     load_location = os.path.join(config.MODEL_DIR, args.subject)
     word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
     em_suffix = gpt_checkpoint
-    if args.gpt_layer != config.GPT_LAYER or args.gpt_words != config.GPT_WORDS:
+    if len(args.gpt_layers) > 1:
+        em_suffix += "_layers%s_words%d" % ("-".join(str(l) for l in args.gpt_layers), args.gpt_words)
+    elif args.gpt_layer != config.GPT_LAYER or args.gpt_words != config.GPT_WORDS:
         em_suffix += "_layer%d_words%d" % (args.gpt_layer, args.gpt_words)
     encoding_model = np.load(os.path.join(load_location, "encoding_model_%s.npz" % em_suffix))
     weights = encoding_model["weights"]

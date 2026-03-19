@@ -40,9 +40,19 @@ class GPT():
         """
         mask = torch.ones(ids.shape).int()
         with torch.no_grad():
-            outputs = self.model(input_ids = ids.to(self.device), 
+            outputs = self.model(input_ids = ids.to(self.device),
                                  attention_mask = mask.to(self.device), output_hidden_states = True)
         return outputs.hidden_states[layer].detach().cpu().numpy()
+
+    def get_hidden_multilayer(self, ids, layers):
+        """get hidden layer representations from multiple layers, concatenated along feature dim
+        """
+        mask = torch.ones(ids.shape).int()
+        with torch.no_grad():
+            outputs = self.model(input_ids = ids.to(self.device),
+                                 attention_mask = mask.to(self.device), output_hidden_states = True)
+        hidden = [outputs.hidden_states[l].detach().cpu().numpy() for l in layers]
+        return np.concatenate(hidden, axis = -1)
 
     def get_probs(self, ids):
         """get next word probability distributions
