@@ -1,0 +1,7 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuda is available: True
+/var/spool/slurmd/job12314643/slurm_script: line 30: 1896940 Killed                  python3 decoding/train_EM.py --subject S2 --gpt perceived --gpt-layers 3 5 7 9
+/var/spool/slurmd/job12314643/slurm_script: line 31: 2616291 Killed                  python3 decoding/train_EM.py --subject S2 --gpt imagined --gpt-layers 3 5 7 9
+/var/spool/slurmd/job12314643/slurm_script: line 32: 2623675 Killed                  python3 decoding/train_EM.py --subject S3 --gpt perceived --gpt-layers 3 5 7 9
+/var/spool/slurmd/job12314643/slurm_script: line 33: 2631290 Killed                  python3 decoding/train_EM.py --subject S3 --gpt imagined --gpt-layers 3 5 7 9
+[2026-03-22T07:56:39.304] error: Detected 4 oom_kill events in StepId=12314643.batch. Some of the step tasks have been OOM Killed.

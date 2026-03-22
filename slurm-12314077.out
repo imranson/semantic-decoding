@@ -1,0 +1,7 @@
+Job is using 1 GPU(s) with ID(s) 0 and 8 CPU core(s)
+torch cuda is available: True
+[2026-03-20T07:29:11.818] error: slurm_get_node_energy: Socket timed out on send/recv operation
+[2026-03-20T07:29:11.847] error: _get_joules_task: can't get info from slurmd
+[2026-03-20T07:29:41.817] error: slurm_get_node_energy: Socket timed out on send/recv operation
+[2026-03-20T07:29:41.818] error: _get_joules_task: can't get info from slurmd
+[2026-03-20T07:32:31.809] error: IPMI failure detected, energy reading for this step will not be accurate.
