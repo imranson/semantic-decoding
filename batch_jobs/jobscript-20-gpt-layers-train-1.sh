@@ -1,7 +1,7 @@
 #!/bin/bash --login
 ### Choose ONE of the following partitions depending on your permitted access
 
-#SBATCH -p gpuL         
+#SBATCH -p gpuA         
 ### Required flags
 #SBATCH -G 1                 # (or --gpus=N) Number of GPUs 
 #SBATCH -t 4-0               # Wallclock timelimit (1-0 is one day, 4-0 is max permitted)
@@ -27,10 +27,6 @@ print(f'torch cuda is available: {torch.cuda.is_available()}')"
 
 python3 decoding/train_EM.py --subject S1 --gpt perceived --gpt-layers 3 5 7 9
 python3 decoding/train_EM.py --subject S1 --gpt imagined --gpt-layers 3 5 7 9
-python3 decoding/train_EM.py --subject S2 --gpt perceived --gpt-layers 3 5 7 9
-python3 decoding/train_EM.py --subject S2 --gpt imagined --gpt-layers 3 5 7 9
-python3 decoding/train_EM.py --subject S3 --gpt perceived --gpt-layers 3 5 7 9
-python3 decoding/train_EM.py --subject S3 --gpt imagined --gpt-layers 3 5 7 9
 
 module purge
 conda deactivate
