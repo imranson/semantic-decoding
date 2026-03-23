@@ -7,7 +7,7 @@
 #SBATCH -t 4-0               # Wallclock timelimit (1-0 is one day, 4-0 is max permitted)
 
 ### Optional flags
-#SBATCH -n 8          # (or --ntasks=) Number of CPU (host) cores (default is 1)
+#SBATCH -n 12          # (or --ntasks=) Number of CPU (host) cores (default is 1)
                              # See above for number of cores per GPU you can request.
                              # Also affects host RAM allocated to job unless --mem=num used.
 
