@@ -1,0 +1,5 @@
+Job is using 1 GPU(s) with ID(s) 0 and 12 CPU core(s)
+torch cuda is available: True
+/net/scratch/q12628ct/semantic-decoding/decoding/utils_ridge/interpdata.py:159: RuntimeWarning: invalid value encountered in divide
+  val = window * np.sin(np.pi*t) * np.sin(np.pi*t/window) / (np.pi**2 * t**2)
+[2026-03-26T00:04:59.793] error: *** JOB 12548662 ON node849 CANCELLED AT 2026-03-26T00:04:59 DUE to SIGNAL Terminated ***

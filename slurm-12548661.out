@@ -1,0 +1,450 @@
+Job is using 1 GPU(s) with ID(s) 0 and 12 CPU core(s)
+torch cuda is available: True
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_auditory.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_auditory.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_auditory.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/run_decoder.py", line 60, in <module>
+    word_rate_model = np.load(os.path.join(load_location, "word_rate_model_%s.npz" % word_rate_voxels), allow_pickle = True)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/models/S1/word_rate_model_speech.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/perceived_speech/gpt_layers_3_5_7_9/wheretheressmoke.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/perceived_movie/gpt_layers_3_5_7_9/presto.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/perceived_movie/gpt_layers_3_5_7_9/partlycloudy.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/perceived_movie/gpt_layers_3_5_7_9/laluna.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/perceived_multispeaker/gpt_layers_3_5_7_9/attend-M.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/perceived_multispeaker/gpt_layers_3_5_7_9/attend-F.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/alpha_repeat-1.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/alpha_repeat-2.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/bravo_repeat-1.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/bravo_repeat-2.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/charlie_repeat-1.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/charlie_repeat-2.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/delta_repeat-1.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.dense.weight', 'lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/delta_repeat-2.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/echo_repeat-1.npz'
+[nltk_data] Downloading package wordnet to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package punkt_tab to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /mnt/iusers01/fse-
+[nltk_data]     ugpgt01/compsci01/q12628ct/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/net/scratch/q12628ct/semantic-decoding/decoding/evaluate_predictions.py", line 38, in <module>
+    pred_data = np.load(pred_path)
+  File "/mnt/iusers01/fse-ugpgt01/compsci01/q12628ct/.conda/envs/semantic-decoding/lib/python3.10/site-packages/numpy/lib/npyio.py", line 427, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: '/net/scratch/q12628ct/semantic-decoding/results/S1/imagined_speech/gpt_layers_3_5_7_9/echo_repeat-2.npz'
