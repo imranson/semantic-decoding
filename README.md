@@ -1,6 +1,6 @@
 # Semantic Decoding
 
-This repository contains code used in the paper "Semantic reconstruction of continuous language from non-invasive brain recordings" by Jerry Tang, Amanda LeBel, Shailee Jain, and Alexander G. Huth.  
+This repository contains code used in the paper "Semantic reconstruction of continuous language from non-invasive brain recordings" by Jerry Tang, Amanda LeBel, Shailee Jain, and Alexander G. Huth. The journal article is available at [`Articles/Semantic-reconstruction-of-continuous-language-from-non-invasive-brain-recordings.pdf`](Articles/Semantic-reconstruction-of-continuous-language-from-non-invasive-brain-recordings.pdf).
 
 ## CSF3 usage tips IMPORTANT
 if below:
