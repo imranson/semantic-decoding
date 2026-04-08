@@ -1,6 +1,10 @@
-# Semantic Decoding
+# About This Submission
 
-This repository contains code used in the paper "Semantic reconstruction of continuous language from non-invasive brain recordings" by Jerry Tang, Amanda LeBel, Shailee Jain, and Alexander G. Huth. The journal article is available at [`Articles/Semantic-reconstruction-of-continuous-language-from-non-invasive-brain-recordings.pdf`](Articles/Semantic-reconstruction-of-continuous-language-from-non-invasive-brain-recordings.pdf).
+[This forked repository](https://github.com/imranson/semantic-decoding) contains code used in the paper "Semantic reconstruction of continuous language from non-invasive brain recordings" by Jerry Tang, Amanda LeBel, Shailee Jain, and Alexander G. Huth. To identify code changes, refer to the full repository, or view code history, view the GitHub link above.
+
+In this submission, only "produced-by-hand" code and scripts have been uploaded. Inference results, test scores, models, logs, and others have been left out per the requirements of this submission. Since this is a research project, most of the produced artifacts are inference results and test scores. However, there are code changes in the `decoding` folder and job scripts in the `batch_jobs` folder.
+
+The generated inference results and test scores are used to plot graphs and create tables for the final report.
 
 ## CSF3 usage tips IMPORTANT
 if below:
